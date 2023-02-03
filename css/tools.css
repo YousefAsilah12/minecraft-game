@@ -1,0 +1,28 @@
+.custom-menu {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  list-style: none;
+  top: 0;
+  left: 0;
+  width:fit-content;
+
+}
+
+.menu-item {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item:hover {
+  background-color: lightgray;
+}
+
+.menu-item img {
+  height: 20px;
+  margin-right: 10px;
+}
+

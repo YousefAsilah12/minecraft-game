@@ -1,0 +1,59 @@
+/* tools classes */
+.axeTool {
+  cursor: url(/imgs/ico/axe.ico), auto !important;
+
+}
+
+.shovelTool {
+  cursor: url(/imgs/ico/shovel.ico), auto !important;
+}
+
+.pickaxeTool {
+  cursor: url(/imgs/ico/pickaxe.ico), auto !important;
+
+}
+
+.swordTool {
+  cursor: url(/imgs/ico/sword.ico), auto !important;
+
+}
+
+.dirtTool {
+  cursor: url(/imgs/ico/dirt.ico), auto !important;
+
+}
+
+.sandTool {
+  cursor: url(/imgs/ico/sand.ico), auto !important;
+
+}
+
+.woodTool {
+  cursor: url(/imgs/ico/wood.ico), auto !important;
+
+}
+
+.stonesTool {
+  cursor: url(/imgs/ico/stones.ico), auto !important;
+
+}
+
+.dirtGreenTool {
+  cursor: url(/imgs/ico/blockWithGrassOnTop.ico), auto !important;
+}
+
+.sunTool {
+  cursor: url(/imgs/ico/sun.ico), auto !important;
+}
+
+.cloudsTool {
+  cursor: url(/imgs/ico/clouds.ico), auto !important;
+}
+
+.treeBranchTool {
+  cursor: url(/imgs/ico/wood_2.ico), auto !important;
+}
+
+.treeLeavesTool {
+  cursor: url(/imgs/ico/trees.ico), auto !important;
+}

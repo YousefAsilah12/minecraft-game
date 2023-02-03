@@ -1,0 +1,140 @@
+/* start with the general css  */
+:root {
+  --sky-color: #87CEEB;
+}
+
+@font-face {
+  font-family: "minecraft";
+  src: url("/font/Minecrafter.Reg.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "minecraft", Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+header {
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+#game-window {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  border: 1px solid #333;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-rows: repeat(21, 1fr);
+  background-color: var(--sky-color);
+}
+
+aside {
+  width: 200px;
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #333;
+  margin-left: 20px;
+}
+
+#inventory {
+  width: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 20%;
+  z-index: 2;
+  height: 40px;
+}
+
+
+.block {
+  width: 100%;
+  height: 100%;
+
+}
+.block:hover{
+  border: black 2px solid;
+}
+
+
+.dirt {
+  background-image: url('/imgs/dirt.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dirtGreen {
+  /* block with top of it green  */
+  background-image: url("/imgs/dirtGreen.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.treeLeaves{
+  background-image: url("/imgs/treeBranch.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.treeBranch{
+  background-image: url("/imgs/treeLeaves.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.sand{
+  background-image: url("/imgs/sand.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.stones{
+  background-image: url("/imgs/sand.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wood{
+  background-image: url("/imgs/wood.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.clouds{
+  background-color: whitesmoke;
+}
+.sun{
+  background-color: yellow;;
+}
