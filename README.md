@@ -36,3 +36,11 @@ i was thinking to add way to make it shorter i made new function to get for me t
 
 also i added permissions to the 4 tools that not every tool can remove any block
 each one has different job
+
+added startPage that has 3 maps to enter and start game option quiet game
+-- added sound music and sfx for the game 
+
+
+
+# to access to the inventory you have to mouse right click 
+# the items will be sorted depending on what you used the last
