@@ -8,8 +8,6 @@ and will be 3 or 4 tools to add or remove depends on the type of the blocks were
 
 
 --stesps for work : 
-
-
   - Create the HTML structure for the game, including elements for the player, the inventory, and the world.
 
   - Style the game using CSS to give it a similar look and feel to Minecraft.
@@ -18,7 +16,7 @@ and will be 3 or 4 tools to add or remove depends on the type of the blocks were
 
   - Implement functionality for adding and removing blocks to the inventory, using an array to store the collected materials.
 
-  - Create a basic player character with basic movements (left, right, up, down) using the arrow keys.
+  - (optional)Create a basic player character with basic movements (left, right, up, down) using the arrow keys.
 
   - Implement the use of an axe and three other main materials, allowing the player to gather resources and shape the world.
 
@@ -32,3 +30,6 @@ and will be 3 or 4 tools to add or remove depends on the type of the blocks were
 
 
 This is a basic outline, and you may want to add more features or change the details as you see fit. Good luck!
+
+#when i did the add or remove at the first it was hard to implement i was using for each material in the inventory if and every one has maybe 5 lines of code * 20 material it will be to much lines of code
+i was thinking to add way to make it shorter i made new function to get for me the specific class iam in it and now with 4 lines of code its can be done 

@@ -4,29 +4,29 @@ import {
 
 //first get all the blocks
 const blocks = document.querySelectorAll('.block');
-console.log(blocks);
 blocks.forEach(block => {
-  block.addEventListener('click', (event) => {
-    debugger;
-    console.log("in for each top", player1.currentTool);
+  block.addEventListener('click', (event) => {  
+    // get Crr Block Class
+    let curBlock = formateBlockName( event.target.classList.toString());
+
+    // get cur Tool only Letters
     let tool = player1.currentTool.replace(/[^a-zA-Z]/g, "");
 
-    // remove
+    // remove if its not Tool 
     if (tool === "axe" || tool === "sword" || tool === "shovel" || tool === "pickaxe") {
-      removeBlocks(block);
-
+      removeBlocks(block,curBlock);
     }
+
     //add
     else {
-      if(player1.inventory[tool]>0)
-      addBlock(block, tool);
+      if (player1.inventory[tool] > 0)
+        addBlock(block, tool);
     }
 
   });
 });
 
 
-console.log("outside the function", player1.currentTool);
 
 function removeBlockPermissions(block, tool) {
   debugger;
@@ -50,32 +50,13 @@ function removeBlockPermissions(block, tool) {
 
 }
 
-function removeBlocks(block) {
+function removeBlocks(block,curBlock) {
   debugger
-  if (block.classList.contains('dirt') && removeBlockPermissions("dirt", player1.currentTool)) {
-    block.classList.remove('dirt');
-    player1.inventory.dirt += 1;
-    document.querySelector('.scoredirt').innerText = player1.inventory.dirt;
-  } else if (block.classList.contains('dirtGreen') && removeBlockPermissions("dirtGreen", player1.currentTool)) {
-    block.classList.remove('dirtGreen');
-    player1.inventory.dirt += 1;
-    document.querySelector('.scoredirtGreen').innerText = player1.inventory.dirt;
-  } else if (block.classList.contains('treeLeaves') && removeBlockPermissions("treeLeaves", player1.currentTool)) {
-    block.classList.remove('treeLeaves');
-    player1.inventory.treeLeaves += 1;
-    document.querySelector('.scoretreeLeaves').innerText = player1.inventory.dirt;
-  } else if (block.classList.contains('treeBranch') && removeBlockPermissions("treeBranch", player1.currentTool)) {
-    block.classList.remove('treeBranch');
-    player1.inventory.treeBranch += 1;
-    document.querySelector('.scoretreeBranch').innerText = player1.inventory.dirt;
-  } else if (block.classList.contains('sun') && removeBlockPermissions("sun", player1.currentTool)) {
-    block.classList.remove('sun');
-    player1.inventory.treeBranch += 1;
-    document.querySelector('.scoresun').innerText = player1.inventory.dirt;
-  } else if (block.classList.contains('clouds') && removeBlockPermissions("clouds", player1.currentTool)) {
-    block.classList.remove('clouds');
-    player1.inventory.treeBranch += 1;
-    document.querySelector('.scoreclouds').innerText = player1.inventory.dirt;
+  
+  if (block.classList.contains(curBlock) && removeBlockPermissions(curBlock, player1.currentTool)) {
+    block.classList.remove(curBlock);
+    player1.inventory[curBlock] += 1;
+    document.querySelector('.score'+curBlock).innerText = player1.inventory[curBlock];
   }
 }
 
@@ -92,8 +73,15 @@ function addBlock(block, tool) {
     return;
   } else {
     block.classList.add(tool);
-    player1.inventory[tool]-=1;
-    document.querySelector('.score'+tool).innerText = player1.inventory[tool];
+    player1.inventory[tool] -= 1;
+    document.querySelector('.score' + tool).innerText = player1.inventory[tool];
 
   }
+}
+
+
+function formateBlockName(curBlock) {
+  curBlock = curBlock.replace('block', "")
+  curBlock = curBlock.replace(' ', "")
+  return curBlock;
 }
