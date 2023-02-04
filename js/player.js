@@ -8,6 +8,18 @@ class player{
     this.currenntInvItem="dirt";
   }
 
+
+  sortTools() {
+      let currentIndex = this.tools.indexOf(this.currentTool);
+      if (currentIndex === -1) {
+        return;
+      }
+      this.tools.splice(currentIndex, 1);
+      this.tools.unshift(this.currentTool);
+    
+    
+  }
+
 }
 
 const player1 = new player();

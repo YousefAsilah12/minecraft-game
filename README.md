@@ -33,3 +33,6 @@ This is a basic outline, and you may want to add more features or change the det
 
 #when i did the add or remove at the first it was hard to implement i was using for each material in the inventory if and every one has maybe 5 lines of code * 20 material it will be to much lines of code
 i was thinking to add way to make it shorter i made new function to get for me the specific class iam in it and now with 4 lines of code its can be done 
+
+also i added permissions to the 4 tools that not every tool can remove any block
+each one has different job

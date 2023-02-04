@@ -1,6 +1,7 @@
 import {
   player1
 } from './player.js';
+import { soundsPlayer } from "./sound.js";
 
 //first get all the blocks
 const blocks = document.querySelectorAll('.block');
@@ -22,6 +23,7 @@ blocks.forEach(block => {
       if (player1.inventory[tool] > 0)
         addBlock(block, tool);
     }
+    soundsPlayer(player1.currentTool)
 
   });
 });
@@ -31,11 +33,11 @@ blocks.forEach(block => {
 function removeBlockPermissions(block, tool) {
   debugger;
 
-  if (block === 'treeBranch' || block === 'treeLeaves' && tool === 'axe') {
+  if (block === 'treeBranch' || block === 'treeLeaves' && tool === 'axe' ||block === 'wood' && tool === 'axe' ) {
     return true;
-  } else if (block === 'stoness' && tool === 'pickaxe') {
+  } else if (block === 'stones' && tool === 'pickaxe') {
     return true;
-  } else if (block === 'dirt' && tool === 'shovel' || block === 'dirtGreen' && tool === 'shovel') {
+  } else if (block === 'dirt' && tool === 'shovel' || block === 'dirtGreen' && tool === 'shovel'|| block === 'sand' && tool === 'shovel') {
     return true;
 
   } else if (block === 'sun' && tool === 'sword' || block === "clouds" && tool === 'sword' || block === "treeBranch" && tool === "sword") {
@@ -57,6 +59,7 @@ function removeBlocks(block,curBlock) {
     block.classList.remove(curBlock);
     player1.inventory[curBlock] += 1;
     document.querySelector('.score'+curBlock).innerText = player1.inventory[curBlock];
+    
   }
 }
 
@@ -85,3 +88,6 @@ function formateBlockName(curBlock) {
   curBlock = curBlock.replace(' ', "")
   return curBlock;
 }
+
+
+

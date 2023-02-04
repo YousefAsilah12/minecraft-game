@@ -37,7 +37,10 @@ main {
   align-items: center;
   flex-grow: 1;
 }
-
+.imgPlusCount{
+  display: flex;
+  flex-direction: row;;
+}
 #game-window {
   width: 100%;
   height: 100%;
@@ -99,14 +102,14 @@ aside {
 
 }
 .treeLeaves{
-  background-image: url("/imgs/treeBranch.png");
+  background-image: url("/imgs/treeLeaves.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
 }
 .treeBranch{
-  background-image: url("/imgs/treeLeaves.png");
+  background-image: url("/imgs/treeBranch.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,7 +123,7 @@ aside {
 
 }
 .stones{
-  background-image: url("/imgs/sand.png");
+  background-image: url("/imgs/stones.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -18,18 +18,18 @@
 
           //crating the tree-1
           if(j===14 && i>7&&i <15){
-            div.classList.add('treeLeaves') 
+            div.classList.add('treeBranch') 
           }
            if(i===7&&j>=12&&j<=16||i===6&&j>=13&&j<=15||i===5&&j===14){
-            div.classList.add('treeBranch');
+            div.classList.add('treeLeaves');
           }
   
           // tree-2
           if(j===2 && i>8&&i <15){
-            div.classList.add('treeLeaves') 
+            div.classList.add('treeBranch') 
           }
            if(i===8&&j>=1&&j<=3||i===7&&j>=1&&j<=3||i===6&&j===2){
-            div.classList.add('treeBranch');
+            div.classList.add('treeLeaves');
           }
          
           // clouds
