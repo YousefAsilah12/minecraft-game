@@ -51,6 +51,22 @@ element.addEventListener('contextmenu', event => {
   
 });
 
+let touchStart = null;
+
+element.addEventListener('touchstart', event => {
+  touchStart = Date.now();
+});
+
+element.addEventListener('touchend', event => {
+  if (Date.now() - touchStart > 500) {
+    event.preventDefault();
+    menu.style.left = event.touches[0].clientX + 'px';
+    menu.style.top = event.touches[0].clientY + 'px';
+    menu.style.display = 'block';
+    soundsPlayer("inventoryOpen");
+  }
+});
+
 menu.addEventListener('click', event => {
   debugger
   event.stopPropagation();
