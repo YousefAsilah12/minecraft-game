@@ -1,5 +1,6 @@
 const container = document.querySelector('#game-window')
-alert("reload page untill u like the map ")
+alert("reload page untill u like the map && right click on the inventory")
+
 
 createMap1();
 
