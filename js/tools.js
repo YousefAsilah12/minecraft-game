@@ -55,7 +55,6 @@ element.addEventListener('contextmenu', event => {
 
 });
 
-
 element.addEventListener("touchstart", function (event) {
   var touchDuration = 0;
   var touchstart = new Date().getTime();
@@ -64,14 +63,18 @@ element.addEventListener("touchstart", function (event) {
     touchDuration = new Date().getTime() - touchstart;
     if (touchDuration >= 1000) {
       clearInterval(interval);
-      // Do something on long touch (500 milliseconds or more)
+      // Do something on long touch (1000 milliseconds or more)
       event.preventDefault();
-      menu.style.left = event.clientX + 'px';
-      menu.style.top = event.clientY + 'px';
+      menu.style.left = event.touches[0].clientX + 'px';
+      menu.style.top = event.touches[0].clientY + 'px';
       menu.style.display = 'block';
-      soundsPlayer("inventoryOpen")
+      soundsPlayer("inventoryOpen");
     }
   }, 50);
+});
+
+element.addEventListener("touchend", function (event) {
+  clearInterval(interval);
 });
 
 menu.addEventListener('click', event => {
