@@ -55,29 +55,24 @@ element.addEventListener('contextmenu', event => {
 
 });
 
-let touchStart = null;
-let touchMove = null;
 
-element.addEventListener('touchstart', event => {
-  touchStart = Date.now();
+element.addEventListener("touchstart", function (event) {
+  var touchDuration = 0;
+  var touchstart = new Date().getTime();
+
+  var interval = setInterval(function () {
+    touchDuration = new Date().getTime() - touchstart;
+    if (touchDuration >= 500) {
+      clearInterval(interval);
+      // Do something on long touch (500 milliseconds or more)
+      event.preventDefault();
+      menu.style.left = event.clientX + 'px';
+      menu.style.top = event.clientY + 'px';
+      menu.style.display = 'block';
+      soundsPlayer("inventoryOpen")
+    }
+  }, 50);
 });
-
-element.addEventListener('touchmove', event => {
-  touchMove = Date.now();
-});
-
-element.addEventListener('touchend', event => {
-  if (touchMove && Date.now() - touchMove > 500) {
-    // 500 is the hold time in milliseconds, you can adjust it to the desired value
-    menu.style.left = event.changedTouches[0].clientX + 'px';
-    menu.style.top = event.changedTouches[0].clientY + 'px';
-    menu.style.display = 'block';
-    soundsPlayer("inventoryOpen");
-  }
-  touchStart = null;
-  touchMove = null;
-});
-
 
 menu.addEventListener('click', event => {
   debugger
