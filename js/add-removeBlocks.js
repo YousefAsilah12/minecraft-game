@@ -23,6 +23,7 @@ blocks.forEach(block => {
       if (player1.inventory[tool] > 0)
         addBlock(block, tool);
     }
+
     soundsPlayer(player1.currentTool)
 
   });
@@ -32,22 +33,15 @@ blocks.forEach(block => {
 
 function removeBlockPermissions(block, tool) {
   debugger;
-
-  if (block === 'treeBranch' || block === 'treeLeaves' && tool === 'axe' ||block === 'wood' && tool === 'axe' ) {
+  if (block === 'treeBranch' &&tool==='axe'|| block === 'treeLeaves' && tool === 'axe' ||block === 'wood' && tool === 'axe' ) {
     return true;
-  } else if (block === 'stones' && tool === 'pickaxe') {
+  } else if (block === 'stones' && tool === 'pickaxe'||block === 'sun' && tool === 'pickaxe' || block === "clouds" && tool === 'pickaxe') {
     return true;
   } else if (block === 'dirt' && tool === 'shovel' || block === 'dirtGreen' && tool === 'shovel'|| block === 'sand' && tool === 'shovel') {
     return true;
-
   } else if (block === 'sun' && tool === 'sword' || block === "clouds" && tool === 'sword' || block === "treeBranch" && tool === "sword") {
     return true;
-  } else if (block === 'sun' && tool === 'pickaxe' || block === "clouds" && tool === 'pickaxe' || block === "treeBranch" && tool === "pickaxe") {
-    return true;
-  } else if (block === 'sun' && tool === 'shovel' || block === "clouds" && tool === 'shovel' || block === "treeBranch" && tool === "shovel") {
-    return true;
-  }
-
+  } 
   return false;
 
 }
@@ -59,7 +53,6 @@ function removeBlocks(block,curBlock) {
     block.classList.remove(curBlock);
     player1.inventory[curBlock] += 1;
     document.querySelector('.score'+curBlock).innerText = player1.inventory[curBlock];
-    
   }
 }
 

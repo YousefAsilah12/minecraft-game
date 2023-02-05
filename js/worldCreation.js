@@ -43,13 +43,16 @@ createMap1();
            }
 
            //grass
-           if (i === grass) {
+           if (i ===grass) {
+             div.classList.remove('dirt');
              div.classList.add('dirtGreen');
            }
 
            //trees
            for (let k = 0; k < treeNumbers; k++) {
              if (j === trees[k] && i > treeTall[k] && i < startTree) {
+             div.classList.remove('dirt');
+              div.classList.remove('treeLeaves')
                div.classList.add('treeBranch')
              }
              if (i === treeTall[k] && j >= trees[k] - width && j <= trees[k] + width || i === treeTall[k] - 1 && j >= trees[k] - width && j <= trees[k] + width || i === treeTall[k] - 2 && j >= trees[k] - width && j <= trees[k] + width) {
