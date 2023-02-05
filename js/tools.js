@@ -56,11 +56,17 @@ element.addEventListener('contextmenu', event => {
 });
 
 //touch screen 
+var interval;
+
 element.addEventListener("touchstart", function (event) {
   var touchDuration = 0;
   var touchstart = new Date().getTime();
 
-  var interval = setInterval(function () {
+  if (interval) {
+    clearInterval(interval);
+  }
+
+  interval = setInterval(function () {
     touchDuration = new Date().getTime() - touchstart;
     if (touchDuration >= 1000) {
       clearInterval(interval);
@@ -77,7 +83,6 @@ element.addEventListener("touchstart", function (event) {
 element.addEventListener("touchend", function (event) {
   clearInterval(interval);
 });
-
 
 
 
