@@ -57,6 +57,8 @@ createMap1();
              }
              if (i === treeTall[k] && j >= trees[k] - width && j <= trees[k] + width || i === treeTall[k] - 1 && j >= trees[k] - width && j <= trees[k] + width || i === treeTall[k] - 2 && j >= trees[k] - width && j <= trees[k] + width) {
                div.classList.add('treeLeaves')
+               div.classList.remove('treeBranch')
+               
              }
            }
 
