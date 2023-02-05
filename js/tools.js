@@ -50,7 +50,6 @@ element.addEventListener('contextmenu', event => {
   soundsPlayer("inventoryOpen")
   
 });
-
 let touchStart = null;
 
 element.addEventListener('touchstart', event => {
@@ -59,6 +58,7 @@ element.addEventListener('touchstart', event => {
 
 element.addEventListener('touchend', event => {
   if (Date.now() - touchStart > 500) {
+    // 500 is the hold time in milliseconds, you can adjust it to the desired value
     event.preventDefault();
     menu.style.left = event.touches[0].clientX + 'px';
     menu.style.top = event.touches[0].clientY + 'px';
@@ -66,6 +66,7 @@ element.addEventListener('touchend', event => {
     soundsPlayer("inventoryOpen");
   }
 });
+
 
 menu.addEventListener('click', event => {
   debugger
