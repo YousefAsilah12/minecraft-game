@@ -62,7 +62,7 @@ element.addEventListener("touchstart", function (event) {
 
   var interval = setInterval(function () {
     touchDuration = new Date().getTime() - touchstart;
-    if (touchDuration >= 500) {
+    if (touchDuration >= 1000) {
       clearInterval(interval);
       // Do something on long touch (500 milliseconds or more)
       event.preventDefault();
