@@ -1,4 +1,12 @@
 /* tools classes */
+body{
+  /* disable the select text */
+    -webkit-user-select: none; /* for Safari */
+    -moz-user-select: none; /* for Firefox */
+    -ms-user-select: none; /* for Internet Explorer */
+    user-select: none; /* for other browsers */
+  
+}
 .axeTool {
   cursor: url(/imgs/ico/axe.ico), auto !important;
 
