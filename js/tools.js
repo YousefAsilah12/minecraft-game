@@ -69,7 +69,6 @@ element.addEventListener('touchmove', event => {
 element.addEventListener('touchend', event => {
   if (touchMove && Date.now() - touchMove > 500) {
     // 500 is the hold time in milliseconds, you can adjust it to the desired value
-    event.preventDefault();
     menu.style.left = event.changedTouches[0].clientX + 'px';
     menu.style.top = event.changedTouches[0].clientY + 'px';
     menu.style.display = 'block';
@@ -82,7 +81,6 @@ element.addEventListener('touchend', event => {
 
 menu.addEventListener('click', event => {
   debugger
-  event.stopPropagation();
   changeCurrTool(event.target.innerText);
   menu.style.display = 'none';
   player1.sortTools();
