@@ -19,7 +19,7 @@ function appendTool() {
     menu.removeChild(menu.firstChild);
   }
   for (let i = 0; i < player1.tools.length; i++) {
-    debugger
+    
     let tool = player1.tools[i];
     let li = document.createElement('li');
     li.classList.add('menu-item');
@@ -55,11 +55,14 @@ element.addEventListener('contextmenu', event => {
 
 });
 
+//touch screen 
+var interval;
+
 element.addEventListener("touchstart", function (event) {
   var touchDuration = 0;
   var touchstart = new Date().getTime();
 
-  var interval = setInterval(function () {
+  interval = setInterval(function () {
     touchDuration = new Date().getTime() - touchstart;
     if (touchDuration >= 1000) {
       clearInterval(interval);
@@ -77,8 +80,10 @@ element.addEventListener("touchend", function (event) {
   clearInterval(interval);
 });
 
+
+
 menu.addEventListener('click', event => {
-  debugger
+  
   changeCurrTool(event.target.innerText);
   menu.style.display = 'none';
   player1.sortTools();
@@ -89,7 +94,7 @@ menu.addEventListener('click', event => {
 
 
 function changeCurrTool(tool) {
-  debugger
+  
   tool = tool.replace(/[^a-zA-Z]/g, "");
   player1.currentTool = tool;
   document.body.className = "";

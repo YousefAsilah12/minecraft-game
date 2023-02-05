@@ -13,7 +13,6 @@ let selected = false;
 
 
 document.querySelector(".startGame").addEventListener("click", (e) => {
-  debugger
   if (selected) {
     let location
     if (Number(mapSelected) === 1) {

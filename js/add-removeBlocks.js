@@ -32,7 +32,7 @@ blocks.forEach(block => {
 
 
 function removeBlockPermissions(block, tool) {
-  debugger;
+  ;
   if (block === 'treeBranch' &&tool==='axe'|| block === 'treeLeaves' && tool === 'axe' ||block === 'wood' && tool === 'axe' ) {
     return true;
   } else if (block === 'stones' && tool === 'pickaxe'||block === 'sun' && tool === 'pickaxe' || block === "clouds" && tool === 'pickaxe') {
@@ -47,7 +47,7 @@ function removeBlockPermissions(block, tool) {
 }
 
 function removeBlocks(block,curBlock) {
-  debugger
+  
   
   if (block.classList.contains(curBlock) && removeBlockPermissions(curBlock, player1.currentTool)) {
     block.classList.remove(curBlock);
@@ -57,7 +57,7 @@ function removeBlocks(block,curBlock) {
 }
 
 function addBlock(block, tool) {
-  debugger
+  
   // check if this place contains block before
   if (block.classList.contains('dirt') || block.classList.contains('dirtGreen') ||
     block.classList.contains('tree-leaves') || block.classList.contains('treeBranch') ||
