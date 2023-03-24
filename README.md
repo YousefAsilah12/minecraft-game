@@ -20,7 +20,7 @@
 <li>random map generator</li>
 </ul><h2>Screenshots</h2>
 <hr><p><img src="https://i.ibb.co/17pGz7h/Screenshot-2023-03-24-131818.png" alt=""></p><p><img src="https://i.ibb.co/Dttcd99/Screenshot-2023-03-24-131841.png" alt=""></p><h2>Usage</h2>
-<hr><p>Netlify Link : https://yousef-minecraft.netlify.app/</p><h2>Features that can be added</h2>
+<hr><p>Demo : https://yousef-minecraft.netlify.app/</p><h2>Features that can be added</h2>
 <hr><ul>
 <li>add more maps</li>
 </ul><ul>
