@@ -1,46 +1,38 @@
-# minecraft-game
-2d minecraft game using html css js only 
-so i will make it simple game not high level 
-it will start by generating the map 
-and then start to make the add remove block s
-and will be added to the inventory or removed from the inventory
-and will be 3 or 4 tools to add or remove depends on the type of the blocks were trying to add or remove
+<h1>Minecraft game</h1>
+<hr><p>a 2d Minecraft game</p><h2>General Information</h2>
+<hr><ul>
+<li>its a 2d Minecraft game</li>
+</ul><ul>
+<li>its done with vanilla HTML,CSS,JS</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>HTML</li>
+</ul><ul>
+<li>CSS</li>
+</ul><ul>
+<li>JavaScript</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>custom sound for each block</li>
+</ul><ul>
+<li>a custome cursors to specific selected item</li>
+</ul><ul>
+<li>random map generator</li>
+</ul><h2>Screenshots</h2>
+<hr><p><img src="https://i.ibb.co/17pGz7h/Screenshot-2023-03-24-131818.png" alt=""></p><p><img src="https://i.ibb.co/Dttcd99/Screenshot-2023-03-24-131841.png" alt=""></p><h2>Usage</h2>
+<hr><p>Netlify Link : https://yousef-minecraft.netlify.app/</p><h2>Features that can be added</h2>
+<hr><ul>
+<li>add more maps</li>
+</ul><ul>
+<li>add a character</li>
+</ul><ul>
+<li>add more blocks</li>
+</ul><h2>Contact</h2>
+<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/yousef-asilah-2b891219b/"><img style="width: 10%;" target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a><span style="margin-right: 30px;"></span><a href="https://github.com/YousefAsilah12"><img style="width: 10%;" target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></a></p>
+I developed a 2D Minecraft game using only HTML, CSS, and JavaScript. The game starts by generating a world with various blocks and materials. Players can add or remove blocks from their inventory, which is stored in an array. To simplify this process, I created a function that identifies the specific block class that players interact with, significantly reducing the amount of code required.
 
+To add more depth to the game, I added an axe and three other materials, each with different permissions for removing specific types of blocks. The game includes a start page with three maps to choose from and a quiet game option. To enhance the overall gaming experience, I incorporated sound effects and music.
 
---stesps for work : 
-  - Create the HTML structure for the game, including elements for the player, the inventory, and the world.
+To access their inventory, players simply need to right-click their mouse. The items in the inventory are sorted based on which ones they used last. Finally, I included a feature to save the game state using local storage, allowing players to easily pick up where they left off.
 
-  - Style the game using CSS to give it a similar look and feel to Minecraft.
-
-  - Use JavaScript to generate a random world, including blocks and materials.
-
-  - Implement functionality for adding and removing blocks to the inventory, using an array to store the collected materials.
-
-  - (optional)Create a basic player character with basic movements (left, right, up, down) using the arrow keys.
-
-  - Implement the use of an axe and three other main materials, allowing the player to gather resources and shape the world.
-
-  -  Store the game state using local storage so that the player can pick up where they left off.
-
-  - Add sound effects and music to enhance the gaming experience.
-
-  - Test and debug the game, fixing any issues that arise.
-
-
-
-
-This is a basic outline, and you may want to add more features or change the details as you see fit. Good luck!
-
-#when i did the add or remove at the first it was hard to implement i was using for each material in the inventory if and every one has maybe 5 lines of code * 20 material it will be to much lines of code
-i was thinking to add way to make it shorter i made new function to get for me the specific class iam in it and now with 4 lines of code its can be done 
-
-also i added permissions to the 4 tools that not every tool can remove any block
-each one has different job
-
-added startPage that has 3 maps to enter and start game option quiet game
--- added sound music and sfx for the game 
-
-
-
-# to access to the inventory you have to mouse right click 
-# the items will be sorted depending on what you used the last
+Overall, the game provides an engaging and enjoyable experience for players.
